@@ -8,7 +8,7 @@ def check_winner():
             buttons[combo[0]].config(bg="green")
             buttons[combo[1]].config(bg="green")
             buttons[combo[2]].config(bg="green")
-            messagebox.showinfo("Tic-tac-toe", f"Player {buttons[combo[0]]['text']} wins!")
+            messagebox.showinfo("Tic-tac-toe", f"Player {buttons[combo[1]]['text']} wins!")
             winner = True
             root.quit()
 
