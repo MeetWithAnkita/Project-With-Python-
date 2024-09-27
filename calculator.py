@@ -1,4 +1,5 @@
 from tkinter import *
+import math
 # this function work when click a number show in box
 def btn_Click(number):
     global value #click value store in "value" named global variable
@@ -15,16 +16,16 @@ def btn_equal():
     result= str(eval(value))
     data.set(result)
 
-# def btn_Click(operator):
-#     if operator == '^':
-#         global value
-#         # Replace ^ with ** for exponentiation
-#         base = float(data.get())
-#         exponent = float(data.get())
-#         result = base ** exponent
-#         data.set(result)
+# def btn_root():
+#     global value
+#     expression = expression.replace("√","math.sqrt()")
+#     # Extract the number after √ and calculate square root
+#     # number = expression.split("√")[1]  # Assumes √ is followed by a number
+#     result = str(eval(expression))
+#     data.set(result)
 
-
+  
+          
 
 root = Tk()  # main window of this application is root 
 root.title("My Calculator")   #title of this window 
@@ -86,7 +87,7 @@ btn3.grid(row=3,column=2)
 btnmul= Button(root,text="*",font=("ariel",12,"bold"),bd=12,height=2,width=6,command=lambda:btn_Click("*"))
 btnmul.grid(row=3,column=3)
 
-btn_power= Button(root,text="^",font=("ariel",12,"bold"),bd=12,height=2,width=6,command=lambda:btn_Click("^"))
+btn_power= Button(root,text="^",font=("ariel",12,"bold"),bd=12,height=2,width=6,command=lambda:btn_Click("**"))
 btn_power.grid(row=3,column=4)
 
 # row 4
