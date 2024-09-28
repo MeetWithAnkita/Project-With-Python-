@@ -11,19 +11,6 @@ def btn_clear():
     value=""
     data.set("")
 
-def btn_equal():
-    global value    
-    result= str(eval(value))
-    data.set(result)
-
-# def btn_root():
-#     global value
-#     expression = expression.replace("√","math.sqrt()")
-#     # Extract the number after √ and calculate square root
-#     # number = expression.split("√")[1]  # Assumes √ is followed by a number
-#     result = str(eval(expression))
-#     data.set(result)
-
 # Equal button function for calculating the result
 def btn_equal():
     global value
@@ -125,7 +112,7 @@ btn0.grid(row=4,column=0)
 btnpoint= Button(root,text=".",font=("ariel",12,"bold"),bd=12,height=2,width=6,command=lambda:btn_Click("."))
 btnpoint.grid(row=4,column=1)
 
-btn_root= Button(root,text="√",font=("ariel",12,"bold"),bd=12,height=2,width=6,command=btn_root)
+btn_root= Button(root,text="√",font=("ariel",12,"bold"),bd=12,height=2,width=6,command=lambda:btn_Click("√"))
 btn_root.grid(row=4,column=2)
 
 btndiv= Button(root,text="/",font=("ariel",12,"bold"),bd=12,height=2,width=6,command=lambda:btn_Click("/"))
@@ -140,4 +127,3 @@ btnequl.grid(row=4,column=4)
 
 
 root.mainloop()
-
