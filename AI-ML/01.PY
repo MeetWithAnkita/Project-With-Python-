@@ -12,3 +12,4 @@ user_input = input("Enter numbers separated by spaces: ")
 example_list = list(map(int, user_input.split())) 
 
 print_single_occurrence(example_list)
+# end of the project 
